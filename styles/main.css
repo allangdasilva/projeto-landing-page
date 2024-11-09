@@ -3,4 +3,31 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: #1E2126;
+}
+header .c-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-image: url(../images/bg-header.png);
+  background-position: center;
+  background-size: cover;
+}
+header .c-header .header-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+}
+header .c-header .header-image img {
+  height: 100%;
+}
+header .c-header .header-content {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

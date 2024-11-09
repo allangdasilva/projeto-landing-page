@@ -7,3 +7,44 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+header {
+    background-color: $black;
+    
+    .c-header {
+        @include flex-center-column;
+        justify-content: flex-start;
+        min-height: 100vh;
+
+        background-image: url(../images/bg-header.png);
+        background-position: center;
+        background-size: cover;
+
+        .header-image {
+            @include flex-center;
+            height: 380px;
+
+            img {
+                height: 100%;
+            }
+        }
+        .header-content {
+            text-align: center;
+
+            .header-text {
+
+                h1 {
+
+                }
+                p {
+
+                }
+            }
+            .header-button {
+
+                .main-button {
+
+                }
+            }
+        }
+    }
+}
