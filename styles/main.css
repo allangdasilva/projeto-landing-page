@@ -8,16 +8,32 @@
 header {
   background-color: #1E2126;
 }
+@media screen and (min-width: 900px) {
+  header {
+    background-image: url(../images/bg-header.png);
+    background-position: center;
+    background-size: cover;
+  }
+}
 header .c-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
-  background-image: url(../images/bg-header.png);
-  background-position: center;
-  background-size: cover;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 900px) {
+  header .c-header {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    height: 620px;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 0;
+  }
 }
 header .c-header .header-image {
   display: flex;
@@ -25,10 +41,27 @@ header .c-header .header-image {
   align-items: center;
   padding-inline: 20px;
   width: 100%;
+  background-image: url(../images/bg-header-mobile.png);
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  header .c-header .header-image {
+    align-items: flex-start;
+    height: 100%;
+    max-width: 50%;
+    padding-left: 0;
+    background-image: none;
+  }
 }
 header .c-header .header-image img {
   width: 100%;
   max-width: 380px;
+}
+@media screen and (min-width: 900px) {
+  header .c-header .header-image img {
+    max-width: 420px;
+  }
 }
 header .c-header .header-content {
   display: flex;
@@ -36,10 +69,19 @@ header .c-header .header-content {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  text-align: center;
   padding-inline: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  header .c-header .header-content {
+    height: 100%;
+    width: 50%;
+    padding-right: 0;
+    text-align: start;
+  }
 }
 header .c-header .header-content .header-text h1 {
+  line-height: 2.6rem;
   font-size: 1.8rem;
   color: #F9F9F9;
 }
@@ -47,20 +89,42 @@ header .c-header .header-content .header-text h1 mark {
   color: #F20C36;
   background-color: transparent;
 }
+@media screen and (min-width: 900px) {
+  header .c-header .header-content .header-text h1 {
+    font-size: 2.2rem;
+  }
+}
 header .c-header .header-content .header-text p {
+  max-width: 680px;
+  margin-inline: auto;
   font-size: 0.9rem;
   color: #E0E0E0;
+}
+@media screen and (min-width: 900px) {
+  header .c-header .header-content .header-text p {
+    font-size: 1rem;
+    max-width: 500px;
+    margin-inline: initial;
+  }
 }
 header .c-header .header-content .header-button {
   width: 100%;
 }
 header .c-header .header-content .header-button a .main-button {
   width: 100%;
+  max-width: 480px;
   border: none;
   border-radius: 5px;
-  padding: 10px 5px;
+  padding: 15px 5px;
   font-size: 1.05rem;
   font-weight: 450;
   color: #1E2126;
+  cursor: pointer;
   background-color: #0BD9AE;
+}
+@media screen and (min-width: 900px) {
+  header .c-header .header-content .header-button a .main-button {
+    max-width: 500px;
+    font-size: 1.1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

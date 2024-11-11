@@ -9,15 +9,32 @@
 }
 header {
     background-color: $black;
-    
-    .c-header {
-        @include flex-center-column;
-        justify-content: flex-start;
-        min-height: 100vh;
 
+    // Desktop
+    @include desktop {
         background-image: url(../images/bg-header.png);
         background-position: center;
         background-size: cover;
+    }
+
+    .c-header {
+        @include flex-center-column;
+        justify-content: flex-start;
+        padding-bottom: 60px;
+
+        // Desktop
+        @include desktop {
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+
+            height: 620px;
+            max-width: 1200px;
+            margin-inline: auto;
+
+            padding: 0;
+        }
 
         .header-image {
             @include flex-center;
@@ -25,21 +42,53 @@ header {
             padding-inline: 20px;
             width: 100%;
 
+            background-image: url(../images/bg-header-mobile.png);
+            background-position: center;
+            background-size: cover;
+
+            // Desktop
+            @include desktop {
+                align-items: flex-start;
+
+                height: 100%;
+                max-width: 50%;
+
+                padding-left: 0;
+
+                background-image: none;
+            }
+
             img {
                 width: 100%;
                 max-width: 380px;
+
+                // Desktop
+                @include desktop {
+                    max-width: 420px
+                }
             }
         }
         .header-content {
             @include flex-center-column;
             gap: 20px;
 
-            text-align: center;
             padding-inline: 20px;
+            text-align: center;
+
+            // Desktop
+            @include desktop {
+                height: 100%;
+                width: 50%;
+                
+                padding-right: 0;
+
+                text-align: start;
+            }
 
             .header-text {
                 
                 h1 {
+                    line-height: 2.6rem;
                     font-size: 1.8rem;
                     color: $white;
 
@@ -47,10 +96,26 @@ header {
                         color: $red-01;
                         background-color: transparent;
                     }
+
+                    // Desktop
+                    @include desktop {
+                        font-size: 2.2rem;
+                    }
                 }
                 p {
+                    max-width: 680px;
+                    margin-inline: auto;
+
                     font-size: 0.9rem;
                     color: $gray;
+
+                    // Desktop
+                    @include desktop {
+                        font-size: 1rem;
+                        max-width: 500px;
+
+                        margin-inline: initial;
+                    }
                 }
             }
             .header-button {
@@ -60,17 +125,26 @@ header {
 
                     .main-button {
                         width: 100%;
+                        max-width: 480px;
 
                         border: none;
                         border-radius: 5px;
 
-                        padding: 10px 5px;
+                        padding: 15px 5px;
 
                         font-size: 1.05rem;
                         font-weight: 450;
                         color: $black;
 
+                        cursor: pointer;
+
                         background-color: $green;
+
+                        // Desktop
+                        @include desktop {
+                            max-width: 500px;
+                            font-size: 1.1rem;
+                        }
                     }
                 }
                 
