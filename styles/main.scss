@@ -21,29 +21,59 @@ header {
 
         .header-image {
             @include flex-center;
-            height: 380px;
+
+            padding-inline: 20px;
+            width: 100%;
 
             img {
-                height: 100%;
+                width: 100%;
+                max-width: 380px;
             }
         }
         .header-content {
+            @include flex-center-column;
+            gap: 20px;
+
             text-align: center;
+            padding-inline: 20px;
 
             .header-text {
-
+                
                 h1 {
+                    font-size: 1.8rem;
+                    color: $white;
 
+                    mark {
+                        color: $red-01;
+                        background-color: transparent;
+                    }
                 }
                 p {
-
+                    font-size: 0.9rem;
+                    color: $gray;
                 }
             }
             .header-button {
+                width: 100%;
+                
+                a {
 
-                .main-button {
+                    .main-button {
+                        width: 100%;
 
+                        border: none;
+                        border-radius: 5px;
+
+                        padding: 10px 5px;
+
+                        font-size: 1.05rem;
+                        font-weight: 450;
+                        color: $black;
+
+                        background-color: $green;
+                    }
                 }
+                
             }
         }
     }

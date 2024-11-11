@@ -23,11 +23,44 @@ header .c-header .header-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 380px;
+  padding-inline: 20px;
+  width: 100%;
 }
 header .c-header .header-image img {
-  height: 100%;
+  width: 100%;
+  max-width: 380px;
 }
 header .c-header .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   text-align: center;
+  padding-inline: 20px;
+}
+header .c-header .header-content .header-text h1 {
+  font-size: 1.8rem;
+  color: #F9F9F9;
+}
+header .c-header .header-content .header-text h1 mark {
+  color: #F20C36;
+  background-color: transparent;
+}
+header .c-header .header-content .header-text p {
+  font-size: 0.9rem;
+  color: #E0E0E0;
+}
+header .c-header .header-content .header-button {
+  width: 100%;
+}
+header .c-header .header-content .header-button a .main-button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-size: 1.05rem;
+  font-weight: 450;
+  color: #1E2126;
+  background-color: #0BD9AE;
 }/*# sourceMappingURL=main.css.map */
