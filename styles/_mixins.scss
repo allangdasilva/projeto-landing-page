@@ -1,3 +1,28 @@
+@use 'variables' as *;
+
+@mixin main-button {
+    width: 100%;
+    max-width: 480px;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 15px 5px;
+
+    font-size: 1.05rem;
+    font-weight: 450;
+    color: $black-01;
+
+    cursor: pointer;
+
+    background-color: $green;
+
+    // Desktop
+    @include desktop {
+        max-width: 500px;
+        font-size: 1.1rem;
+    }
+}
 @mixin flex-center {
     display: flex;
     justify-content: center;

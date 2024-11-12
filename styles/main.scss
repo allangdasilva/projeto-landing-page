@@ -8,7 +8,7 @@
     font-family: "Poppins", sans-serif;
 }
 header {
-    background-color: $black;
+    background-color: $black-01;
 
     // Desktop
     @include desktop {
@@ -118,36 +118,88 @@ header {
                     }
                 }
             }
-            .header-button {
+            .header-link {
                 width: 100%;
                 
                 a {
 
-                    .main-button {
-                        width: 100%;
-                        max-width: 480px;
-
-                        border: none;
-                        border-radius: 5px;
-
-                        padding: 15px 5px;
-
-                        font-size: 1.05rem;
-                        font-weight: 450;
-                        color: $black;
-
-                        cursor: pointer;
-
-                        background-color: $green;
-
-                        // Desktop
-                        @include desktop {
-                            max-width: 500px;
-                            font-size: 1.1rem;
-                        }
+                    .header-button {
+                        @include main-button;
                     }
                 }
                 
+            }
+        }
+    }
+}
+.section-01 {
+    background-color: $black-02;
+
+    .c-section-01 {
+        @include flex-center-column;
+        gap: 20px;
+
+        max-width: 1200px;
+        margin-inline: auto;
+
+        padding: 60px 20px;
+
+        .section-01-text {
+            max-width: 900px;
+            text-align: center;
+
+            h2 {
+                font-size: 1.8rem;
+                color: $white;
+
+                // Desktop
+                @include desktop {
+                    font-size: 2.2rem;
+                }
+
+                mark {
+                    color: $red-01;
+                    background-color: transparent;
+                }
+            }
+        }
+        .section-01-video {
+            position: relative;
+            @include flex-center;
+            
+            width: 100%;
+            max-width: 920px;
+            aspect-ratio: 16/9;
+
+            .video-thumbnail {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                height: 100%;
+                width: 100%;
+                
+                border-radius: 10px;
+                cursor: pointer;
+
+                background-image: url(../images/video-thumbnail.jpg);
+                background-size: cover;
+                background-position: center;
+
+                transition: opacity .4s;
+
+                &.video-thumbnail-active {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+            iframe {
+                height: 100%;
+                width: 100%;
+
+                border-radius: 10px;
+                box-shadow: 0 0 10px $black-01;
+                background-color: $black-01;
             }
         }
     }

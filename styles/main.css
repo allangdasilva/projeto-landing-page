@@ -6,7 +6,7 @@
 }
 
 header {
-  background-color: #1E2126;
+  background-color: #1A1D22;
 }
 @media screen and (min-width: 900px) {
   header {
@@ -107,10 +107,10 @@ header .c-header .header-content .header-text p {
     margin-inline: initial;
   }
 }
-header .c-header .header-content .header-button {
+header .c-header .header-content .header-link {
   width: 100%;
 }
-header .c-header .header-content .header-button a .main-button {
+header .c-header .header-content .header-link a .header-button {
   width: 100%;
   max-width: 480px;
   border: none;
@@ -118,13 +118,77 @@ header .c-header .header-content .header-button a .main-button {
   padding: 15px 5px;
   font-size: 1.05rem;
   font-weight: 450;
-  color: #1E2126;
+  color: #1A1D22;
   cursor: pointer;
   background-color: #0BD9AE;
 }
 @media screen and (min-width: 900px) {
-  header .c-header .header-content .header-button a .main-button {
+  header .c-header .header-content .header-link a .header-button {
     max-width: 500px;
     font-size: 1.1rem;
   }
+}
+
+.section-01 {
+  background-color: #212429;
+}
+.section-01 .c-section-01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 60px 20px;
+}
+.section-01 .c-section-01 .section-01-text {
+  max-width: 900px;
+  text-align: center;
+}
+.section-01 .c-section-01 .section-01-text h2 {
+  font-size: 1.8rem;
+  color: #F9F9F9;
+}
+@media screen and (min-width: 900px) {
+  .section-01 .c-section-01 .section-01-text h2 {
+    font-size: 2.2rem;
+  }
+}
+.section-01 .c-section-01 .section-01-text h2 mark {
+  color: #F20C36;
+  background-color: transparent;
+}
+.section-01 .c-section-01 .section-01-video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 920px;
+  aspect-ratio: 16/9;
+}
+.section-01 .c-section-01 .section-01-video .video-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  background-image: url(../images/video-thumbnail.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s;
+}
+.section-01 .c-section-01 .section-01-video .video-thumbnail.video-thumbnail-active {
+  opacity: 0;
+  pointer-events: none;
+}
+.section-01 .c-section-01 .section-01-video iframe {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #1A1D22;
+  background-color: #1A1D22;
 }/*# sourceMappingURL=main.css.map */
