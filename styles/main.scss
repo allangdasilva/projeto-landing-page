@@ -20,6 +20,10 @@ header {
     .c-header {
         @include flex-center-column;
         justify-content: flex-start;
+
+        max-width: 1200px;
+        margin-inline: auto;
+
         padding-bottom: 60px;
 
         // Desktop
@@ -30,8 +34,6 @@ header {
             gap: 20px;
 
             height: 620px;
-            max-width: 1200px;
-            margin-inline: auto;
 
             padding: 0;
         }
@@ -200,6 +202,125 @@ header {
                 border-radius: 10px;
                 box-shadow: 0 0 10px $black-01;
                 background-color: $black-01;
+            }
+        }
+    }
+}
+.section-02 {
+    background-color: $black-01;
+
+    .c-section-02 {
+        @include flex-center-column;
+        gap: 20px;
+
+        max-width: 1200px;
+        margin-inline: auto;
+
+        padding: 60px 20px;
+
+        // Desktop
+        @include desktop {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: $white;
+
+            // Desktop
+            @include desktop {
+                width: 100%;
+                font-size: 2rem;
+            }
+        }
+        .section-02-image {
+            display: none;
+
+            // Desktop
+            @include desktop {
+                @include flex-center;
+                width: calc(50% - 10px);
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .section-02-content {
+            @include flex-center-column;
+            gap: 20px;
+
+            width: 100%;
+
+            &:has(.section-02-box:hover){
+                .section-02-box:not(:hover){
+                    filter: blur(4px);
+                }
+            }
+
+            // Desktop
+            @include desktop {
+                width: calc(50% - 10px);
+            }
+
+            .section-02-box {
+                @include flex-center;
+                justify-content: flex-start;
+                gap: 10px;
+                
+                width: 90%;
+                max-width: 600px;
+
+                padding: 20px 10px;
+
+                border-radius: 0 10px 10px 0;
+
+                background: linear-gradient(90deg, $black-01, $red-01);
+
+                transition: filter .6s;
+                
+                .box-image {
+                    @include flex-center;
+
+                    width: 100%;
+                    max-width: 60px;
+
+                    img {
+                        width: 100%;
+
+                        filter: brightness(0) saturate(100%) invert(20%) sepia(52%) saturate(6279%) hue-rotate(340deg) brightness(91%) contrast(109%);
+                    }
+                }
+                .box-text {
+
+                    h4 {
+                        font-size: 1.2rem;
+                        color: $white;
+
+                        // Desktop
+                        @include desktop {
+                            font-size: 1.3rem;
+                        }
+                    }
+                    p {
+                        font-size: 0.9rem;
+                        color: $gray;
+
+                        // Desktop
+                        @include desktop {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            .box-01, .box-03 {
+                transform: translateX(5%);
+            }
+            .box-02, .box-04 {
+                transform: translateX(-5%);
             }
         }
     }
