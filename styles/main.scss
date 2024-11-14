@@ -224,16 +224,22 @@ header {
             flex-wrap: wrap;
             gap: 20px;
         }
-
-        h2 {
+        .section-02-text {
             text-align: center;
-            font-size: 1.8rem;
-            color: $white;
 
             // Desktop
             @include desktop {
                 width: 100%;
-                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                color: $white;
+    
+                // Desktop
+                @include desktop {
+                    font-size: 2rem;
+                }
             }
         }
         .section-02-image {

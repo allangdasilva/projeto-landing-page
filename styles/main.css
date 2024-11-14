@@ -213,14 +213,20 @@ header .c-header .header-content .header-link a .header-button {
     gap: 20px;
   }
 }
-.section-02 .c-section-02 h2 {
+.section-02 .c-section-02 .section-02-text {
   text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .section-02 .c-section-02 .section-02-text {
+    width: 100%;
+  }
+}
+.section-02 .c-section-02 .section-02-text h2 {
   font-size: 1.8rem;
   color: #F9F9F9;
 }
 @media screen and (min-width: 900px) {
-  .section-02 .c-section-02 h2 {
-    width: 100%;
+  .section-02 .c-section-02 .section-02-text h2 {
     font-size: 2rem;
   }
 }
