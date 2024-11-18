@@ -410,3 +410,112 @@ header {
         }
     }
 }
+.section-04 {
+    background-color: $black-01;
+
+    .c-section-04 {
+        @include flex-center-column;
+        gap: 20px;
+
+        max-width: 1200px;
+        margin-inline: auto;
+
+        padding: 60px 20px;
+
+        .section-04-text {
+            text-align: center;
+
+            h2 {
+                font-size: 1.8rem;
+                color: $white;
+
+                // Desktop
+                @include desktop {
+                    font-size: 2rem;
+                }
+            }
+        }
+        .section-04-c-content {
+            @include flex-center-column;
+            gap: 20px;
+
+            // Desktop
+            @include desktop {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .section-04-box {
+                @include flex-center-column;
+                gap: 10px;
+
+                max-width: 560px;
+                padding: 10px;
+
+                border-radius: 10px;
+
+                background: linear-gradient(-45deg, $black-02, $black-01, $black-01);
+                background-size: 400%;
+
+                animation: bg-degrade 4s ease alternate infinite;
+
+                // Desktop
+                @include desktop {
+                    width: 100%;
+                }
+
+                .section-04-box-image {
+                    @include flex-center;
+
+                    width: 100%;
+                    max-width: 60px;
+
+                    img {
+                        width: 100%;
+
+                        filter: brightness(0) saturate(100%) invert(16%) sepia(93%) saturate(7321%) hue-rotate(345deg) brightness(97%) contrast(95%);
+                    }
+                }
+                .section-04-box-text {
+                    @include flex-center-column;
+                    text-align: center;
+
+                    h4 {
+                        font-size: 1.2rem;
+                        color: $white;
+
+                        // Desktop
+                        @include desktop {
+                            font-size: 1.3rem;
+                        }
+                    }
+                    p {
+                        font-size: 0.9rem;
+                        color: $gray;
+
+                        // Desktop
+                        @include desktop {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            .section-04-box-01, .section-04-box-03 {
+
+                // Desktop
+                @include desktop {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bg-degrade {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
