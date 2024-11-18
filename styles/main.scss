@@ -288,7 +288,7 @@ header {
 
                 transition: filter .6s;
                 
-                .box-image {
+                .section-02-box-image {
                     @include flex-center;
 
                     width: 100%;
@@ -300,7 +300,7 @@ header {
                         filter: brightness(0) saturate(100%) invert(20%) sepia(52%) saturate(6279%) hue-rotate(340deg) brightness(91%) contrast(109%);
                     }
                 }
-                .box-text {
+                .section-02-box-text {
 
                     h4 {
                         font-size: 1.2rem;
@@ -322,10 +322,10 @@ header {
                     }
                 }
             }
-            .box-01, .box-03 {
+            .section-02-box-01, .section-02-box-03 {
                 transform: translateX(5%);
             }
-            .box-02, .box-04 {
+            .section-02-box-02, .section-02-box-04 {
                 transform: translateX(-5%);
             }
         }
