@@ -35,3 +35,31 @@ new Glider(SLIDER_SEC_03, {
           }
     ],
   });
+
+//Slider Section 05
+const SLIDER_SEC_05 = document.querySelector('.section-05-slider');
+
+new Glider(SLIDER_SEC_05, {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    scrollLock: true,
+    arrows: {
+      prev: '.section-05-slider-prev-button',
+      next: '.section-05-slider-next-button'
+    },
+    responsive: [
+        {
+          breakpoint: 550,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+              slidesToShow: 3
+            }
+          }
+    ],
+  });

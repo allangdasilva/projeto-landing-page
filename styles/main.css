@@ -483,6 +483,79 @@ header .c-header .header-content .header-link a .header-button {
   }
 }
 
+.section-05 {
+  background-color: #212429;
+}
+.section-05 .c-section-05 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 60px 10px;
+}
+.section-05 .c-section-05 .section-05-text {
+  text-align: center;
+}
+.section-05 .c-section-05 .section-05-text h2 {
+  font-size: 1.8rem;
+  color: #F9F9F9;
+}
+@media screen and (min-width: 900px) {
+  .section-05 .c-section-05 .section-05-text h2 {
+    font-size: 2rem;
+  }
+}
+.section-05 .c-section-05 .section-05-c-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.section-05 .c-section-05 .section-05-c-slider .section-05-slider {
+  width: 100%;
+  border-radius: 10px;
+}
+@media screen and (min-width: 900px) {
+  .section-05 .c-section-05 .section-05-c-slider .section-05-slider {
+    width: 90%;
+  }
+}
+.section-05 .c-section-05 .section-05-c-slider .section-05-slider .section-05-c-slider-image {
+  padding-inline: 10px;
+}
+.section-05 .c-section-05 .section-05-c-slider .section-05-slider .section-05-c-slider-image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #1A1D22;
+}
+.section-05 .c-section-05 .section-05-c-slider .section-05-slider-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.section-05 .c-section-05 .section-05-c-slider .section-05-slider-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.section-05 .c-section-05 .section-05-c-slider .section-05-slider-buttons button img {
+  width: 100%;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(52%) saturate(6279%) hue-rotate(340deg) brightness(91%) contrast(109%);
+}
+
 @keyframes bg-degrade {
   0% {
     background-position: 0;

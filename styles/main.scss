@@ -392,19 +392,7 @@ header {
                 padding-right: 10px;
 
                 button {
-                    @include flex-center;
-
-                    height: 40px;
-                    width: 40px;
-
-                    cursor: pointer;
-                    border: none;
-                    background: none;
-
-                    img {
-                        width: 100%;
-                        filter: brightness(0) saturate(100%) invert(20%) sepia(52%) saturate(6279%) hue-rotate(340deg) brightness(91%) contrast(109%);
-                    }
+                    @include slider-button;
                 }
             }
         }
@@ -505,6 +493,69 @@ header {
                 // Desktop
                 @include desktop {
                     margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+.section-05 {
+    background-color: $black-02;
+
+    .c-section-05 {
+        @include flex-center-column;
+        gap: 20px;
+
+        max-width: 1200px;
+        margin-inline: auto;
+
+        padding: 60px 10px;
+
+        .section-05-text {
+            text-align: center;
+
+            h2 {
+                font-size: 1.8rem;
+                color: $white;
+
+                // Desktop
+                @include desktop {
+                    font-size: 2rem;
+                }
+            }
+        }
+        .section-05-c-slider {
+            @include flex-center-column;
+            gap: 10px;
+
+            width: 100%;
+
+            .section-05-slider {         
+                width: 100%;
+                border-radius: 10px;
+
+                // Desktop
+                @include desktop {
+                    width: 90%;
+                }
+
+                .section-05-c-slider-image {
+                    padding-inline: 10px;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+
+                        box-shadow: 0 0 10px $black-01;
+                    }
+                }
+            }
+            .section-05-slider-buttons {
+                @include flex-center;
+                width: 100%;
+
+                button {
+                    @include slider-button;
                 }
             }
         }
