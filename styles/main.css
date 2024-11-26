@@ -589,6 +589,11 @@ header .c-header .header-content .header-link a .header-button {
   background-color: #212429;
 }
 .section-06 .c-section-06 .section-06-c-content-01 .section-06-content-01-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   width: 100%;
   text-align: center;
 }
@@ -788,6 +793,130 @@ header .c-header .header-content .header-link a .header-button {
 @media screen and (min-width: 900px) {
   .section-06 .c-section-06 .section-06-c-content-02 .section-06-content-02-image img {
     max-width: 60%;
+  }
+}
+
+.section-07 {
+  background-color: #212429;
+}
+.section-07 .c-section-07 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 60px 20px;
+}
+.section-07 .c-section-07 .section-07-c-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+}
+@media screen and (min-width: 900px) {
+  .section-07 .c-section-07 .section-07-c-content {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: initial;
+    border: none;
+  }
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-image: url(../images/bg-header.png);
+  background-size: cover;
+  background-position: center;
+  background-color: #1A1D22;
+}
+@media screen and (min-width: 900px) {
+  .section-07 .c-section-07 .section-07-c-content .section-07-c-content-01 {
+    align-items: flex-end;
+    border-radius: 10px;
+  }
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-01 img {
+  width: 100%;
+  max-height: 620px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (min-width: 900px) {
+  .section-07 .c-section-07 .section-07-c-content .section-07-c-content-01 img {
+    max-height: initial;
+  }
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 0 10px 20px 10px;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 {
+    padding: 0 0 10px 0;
+  }
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-text h2 {
+  font-size: 1.8rem;
+  color: #F9F9F9;
+}
+@media screen and (min-width: 900px) {
+  .section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-text h2 {
+    font-size: 2rem;
+  }
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-text h2 mark {
+  color: #F20C36;
+  background-color: transparent;
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-text p {
+  color: #E0E0E0;
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-text p b {
+  color: #F9F9F9;
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-button {
+  width: 100%;
+  padding-inline: 10px;
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-button a {
+  width: 100%;
+}
+.section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-button a .section-07-button {
+  width: 100%;
+  max-width: 480px;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 5px;
+  font-size: 1.05rem;
+  font-weight: 450;
+  color: #1A1D22;
+  cursor: pointer;
+  background-color: #0BD9AE;
+}
+@media screen and (min-width: 900px) {
+  .section-07 .c-section-07 .section-07-c-content .section-07-c-content-02 .section-07-content-button a .section-07-button {
+    max-width: 500px;
+    font-size: 1.1rem;
   }
 }
 

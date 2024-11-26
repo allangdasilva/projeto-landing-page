@@ -593,6 +593,9 @@ header {
             background-color: $black-02;
 
             .section-06-content-01-title {
+                @include flex-center-column;
+                gap: 10px;
+
                 width: 100%;
                 text-align: center;
 
@@ -782,6 +785,120 @@ header {
                     // Desktop
                     @include desktop {
                         max-width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+.section-07 {
+    background-color: $black-02;
+
+    .c-section-07 {
+        @include flex-center;
+
+        max-width: 1200px;
+        margin-inline: auto;
+
+        padding: 60px 20px;
+
+        .section-07-c-content {
+            @include flex-center-column;
+            gap: 20px;
+
+            max-width: 600px;
+
+            border: 1px solid $gray;
+            border-radius: 10px;
+
+            // Desktop
+            @include desktop {
+                flex-direction: row;
+                align-items: stretch;
+
+                max-width: initial;
+                border: none;
+            }
+
+            .section-07-c-content-01 {
+                @include flex-center;
+
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+
+                background-image: url(../images/bg-header.png);
+                background-size: cover;
+                background-position: center;
+                background-color: $black-01;
+
+                //Desktop
+                @include desktop {
+                    align-items: flex-end;
+                    border-radius: 10px;
+                }
+                
+                img {
+                    width: 100%;
+                    max-height: 620px;
+
+                    object-fit: contain;
+
+                    // Desktop
+                    @include desktop {
+                        max-height: initial;
+                    }
+                }
+            }
+            .section-07-c-content-02 {
+                @include flex-center-column;
+                gap: 20px;
+                
+                width: 100%;
+
+                padding: 0 10px 20px 10px;
+                text-align: center;
+
+                // Desktop
+                @include desktop {
+                    padding: 0 0 10px 0;
+                }
+    
+                .section-07-content-text {
+                    @include flex-center-column;
+                    gap: 20px;
+                        
+                    h2 {
+                        font-size: 1.8rem;
+                        color: $white;
+
+                        // Desktop
+                        @include desktop {
+                            font-size: 2rem;
+                        }
+    
+                        mark {
+                            color: $red-01;
+                            background-color: transparent;
+                        }
+                    }
+                    p {
+                        color: $gray;
+    
+                        b {
+                            color: $white;
+                        }
+                    }
+                }
+                .section-07-content-button {
+                    width: 100%;
+                    padding-inline: 10px;
+    
+                    a {
+                        width: 100%;
+    
+                        .section-07-button {
+                            @include main-button;
+                        }
                     }
                 }
             }
