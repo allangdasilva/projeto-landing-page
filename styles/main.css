@@ -920,6 +920,128 @@ header .c-header .header-content .header-link a .header-button {
   }
 }
 
+.section-08 {
+  background-color: #1A1D22;
+}
+.section-08 .c-section-08 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 60px 20px;
+}
+.section-08 .c-section-08 .section-08-text {
+  text-align: center;
+}
+.section-08 .c-section-08 .section-08-text h2 {
+  font-size: 1.8rem;
+  color: #F9F9F9;
+}
+@media screen and (min-width: 900px) {
+  .section-08 .c-section-08 .section-08-text h2 {
+    font-size: 2rem;
+  }
+}
+.section-08 .c-section-08 .section-08-c-accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+}
+.section-08 .c-section-08 .section-08-c-accordion .section-08-accordion-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.section-08 .c-section-08 .section-08-c-accordion .section-08-accordion-box .section-08-accordion-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.section-08 .c-section-08 .section-08-c-accordion .section-08-accordion-box .section-08-accordion-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  border-radius: 2px;
+  background-image: linear-gradient(90deg, #F20C36, transparent);
+}
+.section-08 .c-section-08 .section-08-c-accordion .section-08-accordion-box .section-08-accordion-title h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  pointer-events: none;
+  color: #F9F9F9;
+}
+.section-08 .c-section-08 .section-08-c-accordion .section-08-accordion-box .section-08-accordion-title span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.section-08 .c-section-08 .section-08-c-accordion .section-08-accordion-box .section-08-accordion-title span img {
+  width: 100%;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(1787%) hue-rotate(222deg) brightness(119%) contrast(95%);
+}
+.section-08 .c-section-08 .section-08-c-accordion .section-08-accordion-box .section-08-accordion-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.section-08 .c-section-08 .section-08-c-accordion .section-08-accordion-box .section-08-accordion-text p {
+  padding: 10px;
+  color: #E0E0E0;
+}
+.section-08 .c-section-08 .section-08-content-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+.section-08 .c-section-08 .section-08-content-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.section-08 .c-section-08 .section-08-content-button a .section-08-button {
+  width: 100%;
+  max-width: 480px;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 5px;
+  font-size: 1.05rem;
+  font-weight: 450;
+  color: #1A1D22;
+  cursor: pointer;
+  background-color: #0BD9AE;
+}
+@media screen and (min-width: 900px) {
+  .section-08 .c-section-08 .section-08-content-button a .section-08-button {
+    max-width: 500px;
+    font-size: 1.1rem;
+  }
+}
+
 @keyframes bg-degrade {
   0% {
     background-position: 0;
