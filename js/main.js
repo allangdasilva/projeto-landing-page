@@ -64,32 +64,32 @@ new Glider(SLIDER_SEC_05, {
     ],
   });
 
-  //Accordion
-  const ACCORDION_TITLE = [...document.querySelectorAll('.section-08-accordion-title')];
+//Accordion
+const ACCORDION_TITLE = [...document.querySelectorAll('.section-08-accordion-title')];
 
-  ACCORDION_TITLE.map((el)=>{
-    el.addEventListener('click', (event)=>{
-      const ACCORDION_TEXT_TARGET = event.target.nextElementSibling;
-      const ACCORDION_ICON = event.target.lastElementChild.children[0];
-      
-      ACCORDION_TITLE.map((el)=>{
-        const ACCORDION_TEXT = el.nextElementSibling;
+ACCORDION_TITLE.map((el)=>{
+  el.addEventListener('click', (event)=>{
+    const ACCORDION_TEXT_TARGET = event.target.nextElementSibling;
+    const ACCORDION_ICON = event.target.lastElementChild.children[0];
+    
+    ACCORDION_TITLE.map((el)=>{
+      const ACCORDION_TEXT = el.nextElementSibling;
 
-        if(ACCORDION_TEXT !== ACCORDION_TEXT_TARGET){
-          ACCORDION_TEXT.classList.remove('section-08-accordion-title-active');
-          ACCORDION_TEXT.style.maxHeight = '0';
-          el.lastElementChild.children[0].setAttribute('src','images/svg/add.svg');
-        };
-      });
-
-      ACCORDION_TEXT_TARGET.classList.toggle('section-08-accordion-title-active');
-
-      if(ACCORDION_TEXT_TARGET.className.includes('section-08-accordion-title-active')){
-        ACCORDION_TEXT_TARGET.style.maxHeight = ACCORDION_TEXT_TARGET.children[0].scrollHeight + 'px';
-        ACCORDION_ICON.setAttribute('src','images/svg/remove.svg');
-      }else{
-        ACCORDION_TEXT_TARGET.style.maxHeight = '0';
-        ACCORDION_ICON.setAttribute('src','images/svg/add.svg');
+      if(ACCORDION_TEXT !== ACCORDION_TEXT_TARGET){
+        ACCORDION_TEXT.classList.remove('section-08-accordion-title-active');
+        ACCORDION_TEXT.style.maxHeight = '0';
+        el.lastElementChild.children[0].setAttribute('src','images/svg/add.svg');
       };
     });
+
+    ACCORDION_TEXT_TARGET.classList.toggle('section-08-accordion-title-active');
+
+    if(ACCORDION_TEXT_TARGET.className.includes('section-08-accordion-title-active')){
+      ACCORDION_TEXT_TARGET.style.maxHeight = ACCORDION_TEXT_TARGET.children[0].scrollHeight + 'px';
+      ACCORDION_ICON.setAttribute('src','images/svg/remove.svg');
+    }else{
+      ACCORDION_TEXT_TARGET.style.maxHeight = '0';
+      ACCORDION_ICON.setAttribute('src','images/svg/add.svg');
+    };
   });
+});
