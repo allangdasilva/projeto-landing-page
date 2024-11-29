@@ -79,6 +79,7 @@ ACCORDION_TITLE.map((el)=>{
         ACCORDION_TEXT.classList.remove('section-08-accordion-title-active');
         ACCORDION_TEXT.style.maxHeight = '0';
         el.lastElementChild.children[0].setAttribute('src','images/svg/add.svg');
+        el.lastElementChild.children[0].setAttribute('alt','Plus icon');
       };
     });
 
@@ -87,9 +88,27 @@ ACCORDION_TITLE.map((el)=>{
     if(ACCORDION_TEXT_TARGET.className.includes('section-08-accordion-title-active')){
       ACCORDION_TEXT_TARGET.style.maxHeight = ACCORDION_TEXT_TARGET.children[0].scrollHeight + 'px';
       ACCORDION_ICON.setAttribute('src','images/svg/remove.svg');
+      ACCORDION_ICON.setAttribute('alt','Minus icon');
     }else{
       ACCORDION_TEXT_TARGET.style.maxHeight = '0';
       ACCORDION_ICON.setAttribute('src','images/svg/add.svg');
+      ACCORDION_ICON.setAttribute('alt','Plus icon');
     };
   });
 });
+
+//Back to Top
+const BACK_TO_TOP = document.querySelector('.footer-back-to-top');
+
+function backToTop(){
+  let scrollStep = -window.scrollY / (500 / 15);
+  let scrollInterval = setInterval(() => {
+    if(window.scrollY !== 0){
+      window.scrollBy(0, scrollStep);
+    }else{
+      clearInterval(scrollInterval);
+    }
+  }, 15);
+};
+
+BACK_TO_TOP.addEventListener('click', backToTop);

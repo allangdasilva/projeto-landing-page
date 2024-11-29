@@ -143,6 +143,7 @@ header {
         @include flex-center-column;
         gap: 20px;
 
+        width: 100%;
         max-width: 1200px;
         margin-inline: auto;
 
@@ -215,6 +216,7 @@ header {
         @include flex-center-column;
         gap: 20px;
 
+        width: 100%;
         max-width: 1200px;
         margin-inline: auto;
 
@@ -340,6 +342,7 @@ header {
         @include flex-center-column;
         gap: 20px;
 
+        width: 100%;
         max-width: 1200px;
         margin-inline: auto;
 
@@ -407,6 +410,7 @@ header {
         @include flex-center-column;
         gap: 20px;
 
+        width: 100%;
         max-width: 1200px;
         margin-inline: auto;
 
@@ -507,6 +511,7 @@ header {
         @include flex-center-column;
         gap: 20px;
 
+        width: 100%;
         max-width: 1200px;
         margin-inline: auto;
 
@@ -571,6 +576,7 @@ header {
         align-items: stretch;
         gap: 20px;
 
+        width: 100%;
         max-width: 1200px;
         margin-inline: auto;
 
@@ -633,16 +639,22 @@ header {
                     max-width: 90%;
 
                     li {
+                        position: relative;
                         @include flex-center;
                         justify-content: flex-start;
 
                         width: 100%;
                         padding: 10px;
 
-                        border-bottom: 1px solid $gray;
+                        &::after {
+                            @include line;
+                        }
 
                         &:last-child {
-                            border-bottom: none;
+
+                            &::after {
+                                display: none
+                            }
                         }
 
                         span {
@@ -797,6 +809,7 @@ header {
     .c-section-07 {
         @include flex-center;
 
+        width: 100%;
         max-width: 1200px;
         margin-inline: auto;
 
@@ -912,6 +925,7 @@ header {
         @include flex-center-column;
         gap: 20px;
 
+        width: 100%;
         max-width: 1200px;
         margin-inline: auto;
 
@@ -954,17 +968,7 @@ header {
                     cursor: pointer;
 
                     &::after {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-
-                        height: 1px;
-                        width: 100%;
-
-                        border-radius: 2px;
-
-                        background-image: linear-gradient(90deg, $red-01, transparent);
+                        @include line;
                     }
 
                     h3 {
@@ -982,7 +986,7 @@ header {
                         img {
                             width: 100%;
 
-                            filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(1787%) hue-rotate(222deg) brightness(119%) contrast(95%);
+                            filter: brightness(0) saturate(100%) invert(11%) sepia(77%) saturate(6401%) hue-rotate(344deg) brightness(113%) contrast(97%);
                         }
                     }
                 }
@@ -1014,6 +1018,127 @@ header {
                 .section-08-button {
                     @include main-button;
                 }
+            }
+        }
+    }
+}
+footer {
+    background-color: $black-02;
+
+    .c-footer {
+        @include flex-center-column;
+        gap: 40px;
+
+        width: 100%;
+        max-width: 1200px;
+        margin-inline: auto;
+
+        padding: 60px 20px;
+
+        .footer-logo {
+            @include flex-center;
+            width: 100%;
+
+            img {
+                width: 100%;
+                max-width: 100px;
+            }
+        }
+        .footer-social-content {
+            position: relative;
+            @include flex-center-column;
+            gap: 20px;
+
+            width: 100%;
+
+            padding-block: 20px;
+
+            // Desktop
+            @include desktop {
+                flex-direction: row;
+                padding-block: 40px;
+            }
+
+            &::after {
+                @include line;
+                top: 0;
+                background-image: linear-gradient(-90deg, $gray, transparent);
+            }
+            &::before {
+                @include line;
+            }
+
+            .footer-social-copy {
+                width: 100%;
+                text-align: center;
+
+                p {
+                    font-size: 0.9rem;
+                    color: $gray;
+                }
+            }
+            .footer-social-icons {
+                @include flex-center;
+                width: 100%;
+
+                ul {
+                    @include flex-center;
+                    gap: 20px;
+
+                    li {
+                        
+                        a {
+                            @include flex-center;
+                            width: 100%;
+                            
+                            img {
+                                width: 100%;
+                                max-width: 26px;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-social-back-to-top {
+                @include flex-center;
+                gap: 10px;
+
+                width: 100%;
+
+                text-align: center;
+
+                .footer-back-to-top {
+                    @include flex-center;
+
+                    width: 100%;
+                    max-width: 30px;
+
+                    border-radius: 6px;
+                    cursor: pointer;
+
+                    background-color: $white;
+
+                    transition: .4s;
+
+                    img {
+                        width: 100%;
+
+                        filter: brightness(0) saturate(100%) invert(11%) sepia(6%) saturate(1178%) hue-rotate(179deg) brightness(94%) contrast(98%);
+                    }
+                }
+                p {
+                    font-size: 0.9rem;
+                    color: $gray;
+                }
+            }
+        }
+        .footer-contact {
+            @include flex-center-column;
+            text-align: center;
+
+            p {
+                font-size: 0.9rem;
+                color: $gray;
             }
         }
     }
